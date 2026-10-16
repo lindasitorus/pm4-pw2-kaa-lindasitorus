@@ -1,14 +1,16 @@
-<?php
-
-class AuthMiddleware
+public static function handle()
 {
-    public static function handle()
-    {
-        if (!isset($_SESSION['user_id'])) {
+    // Memastikan session sudah dimulai sebelum mengecek data login
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
 
-            header('Location: /login');
+    // Ambil jalur URL yang sedang diakses saat ini
+    $current_url = $_SERVER['REQUEST_URI'] ?? '';
 
-            exit;
-        }
+    // PENTING: Jika BELUM login DAN tidak sedang membuka halaman /login, baru lempar ke /login
+    if (!isset($_SESSION['user_id']) && $current_url !== '/login') {
+        header('Location: /login');
+        exit;
     }
 }

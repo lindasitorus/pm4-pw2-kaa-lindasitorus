@@ -1,5 +1,5 @@
-<nav>
-    <a href="/">Home</a>
-    <a href="/products">Produk</a>
-    <a href="/login">Login</a>
+<nav class="custom-navbar">
+    <a href="#" class="nav-item">Home</a>
+    <a href="#" class="nav-item">Produk</a>
+    <a href="#" class="nav-item">Login</a>
 </nav>

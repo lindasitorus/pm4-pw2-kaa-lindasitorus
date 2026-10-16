@@ -1,34 +1,102 @@
+/* --- RESET & STYLE DASAR --- */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background-color: #f4f6f9;
+    color: #333;
 }
 
+/* --- KONTEN UTAMA --- */
 header, nav, main, footer {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
     background: #ffffff;
-    border: 1px solid #ddd;
+    border: 1px solid #e3e6f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* --- TOMBOL (BUTTON) --- */
+button[type="submit"] {
+    background-color: #4e73df;
+    color: white;
+    padding: 10px 20px;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #2e59d9;
+}
+
+/* --- TABEL --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e3e6f0;
+}
+
+th {
+    background-color: #f1f5f9;
+    font-weight: 600;
+    color: #4e73df;
+}
+
+tr:hover {
+    background-color: #f8fafc;
+}
+
+nav {
+    display: flex !important;
+    gap: 20px;
+    background-color: #4e73df;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
 nav a {
-    margin-right: 15px;
+    color: white !important;
     text-decoration: none;
-    color: #333;
     font-weight: bold;
+    padding: 5px 10px;
 }
 
 nav a:hover {
-    color: #007bff;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
 }
 
-footer {
-    border-top: 1px solid #ccc;
-    padding-top: 10px;
-    text-align: center;
-    font-size: 0.9em;
-    color: #666;
+/* Gaya Khusus untuk Memaksa Menu Menyamping */
+nav.custom-navbar {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    gap: 20px !important;
+    background-color: #4e73df !important; /* Memberikan warna biru modern */
+    padding: 12px 20px !important;
+    border-radius: 6px !important;
+}
+
+nav.custom-navbar a.nav-item {
+    color: white !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    padding: 6px 12px !important;
+}
+
+nav.custom-navbar a.nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    border-radius: 4px !important;
 }
